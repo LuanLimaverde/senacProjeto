@@ -5,11 +5,14 @@
  */
 package br.com.sunset.Controller;
 
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
+import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.sunset.dao.Filme;
 import br.com.sunset.model.FilmeJpaModel;
+import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
@@ -33,6 +36,7 @@ public class FilmeController {
 		
 	}
         
+        @Post
         @Path("/filme/salvar")
 	public void salvar(Filme filme) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
@@ -57,4 +61,43 @@ public class FilmeController {
             }
 		
 	}
+        
+        @Path("/filme/listar")
+        public void listar(){
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
+            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
+            List<Filme> filme = filmeModel.findFilmeEntities();
+            result.include("filmes", filme);
+        }
+        
+        @Get("/filme/editar/{id}")
+        public void editar(Integer id){
+            
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
+            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
+            Filme filme = filmeModel.findFilme(id);
+            
+            result.include("t2", "Alterar");
+            result.include("filme", filme);
+            result.redirectTo(FilmeController.class).cadastro();
+            
+        }
+        
+        @Get("/filme/deletar/{id}")
+        public void deletar(Integer id){
+            
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
+            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
+            
+            try {
+                filmeModel.destroy(id);
+                result.include("ap", "Deletado com Sucesso");
+            } catch (Exception e) {
+            
+                result.include("ap", e);
+            }
+            result.redirectTo(FilmeController.class).listar();
+        }
+        
+        
 }
