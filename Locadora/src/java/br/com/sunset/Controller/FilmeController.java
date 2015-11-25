@@ -35,6 +35,10 @@ public class FilmeController {
 
 	@Path("/filme/cadastro")
 	public void cadastro() {
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
+            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
+            List<Filme> filme = filmeModel.findFilmeEntities();
+            result.include("filmes", filme);
             
             result.include("t", "Cadastrar");
             EntityManagerFactory emg = Persistence.createEntityManagerFactory("SenacPU");
@@ -50,11 +54,11 @@ public class FilmeController {
         
         @Post
         @Path("/filme/salvar")
-	public void salvar(Filme filme) {
+	public void salvar(Filme movie) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
             FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
-            if (filme.getIdFilme() == null){
-                filmeModel.create(filme);
+            if (movie.getIdFilme() == null){
+                filmeModel.create(movie);
                 try {
                     result.include("ap", "Gravado com Sucesso");
                     
@@ -64,7 +68,7 @@ public class FilmeController {
                 result.redirectTo(FilmeController.class).cadastro();
             } else{
                 try {
-                    filmeModel.edit(filme);
+                    filmeModel.edit(movie);
                     result.include("ap", "Alterado com Sucesso");
                 } catch (Exception e) {
                     result.include("ap", e);
@@ -79,7 +83,7 @@ public class FilmeController {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
             FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
             List<Filme> filme = filmeModel.findFilmeEntities();
-            result.include("filmes", filme);
+            result.include("filme", filme);
             
             EntityManagerFactory emg = Persistence.createEntityManagerFactory("SenacPU");
             GeneroJpaModel GeneroModel = new GeneroJpaModel(emg);
