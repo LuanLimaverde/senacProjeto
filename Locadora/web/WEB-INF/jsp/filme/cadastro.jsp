@@ -23,23 +23,33 @@
                 <tbody>
                     <tr>
                         <td>Nome do Filme:</td>
-                        <td><input type="text" name="filme.nomeFilme" value="" /></td>
+                        <td><input type="text" name="filme.nomeFilme"  /></td>
                     </tr>
                     <tr>
                         <td>Genero:</td>
-                        <td><input type="text" name="filme.idGenero" value="" /></td>
+                        <td><select name="filme.idGenero">
+                                <option>Selecione</option>
+                                <c:forEach var="genero" items="${genero}">
+                                    <option value=${genero.idGenero} > ${genero.nomeGenero} </option>
+                                </c:forEach>
+                            </select></td>
                     </tr>
                     <tr>
                         <td>Estoque:</td>
-                        <td><input type="text" name="filme.estoque" value="" /></td>
+                        <td><input type="text" name="filme.estoque" /></td>
                     </tr>
                     <tr>
                         <td>Classe:</td>
-                        <td><input type="text" name="filme.idClasse" value="" /></td>
+                        <td><select name="filme.idClasse">
+                                <option >Selecione</option>
+                               <c:forEach var="classe" items="${classe}">
+                                    <option value=${classe.idClasse} > ${classe.nomeClasse} </option>
+                                </c:forEach>
+                            </select></td>
                     </tr>
                     <tr>
                         <td>Descrição:</td>
-                        <td><input type="text" name="filme.descricao" value="" /></td>
+                        <td><input type="text" name="filme.descricao"/></td>
                     </tr>
                     <tr>
                         <td colspan="2" align='center'><input type="submit" value="SALVAR" /></td>
