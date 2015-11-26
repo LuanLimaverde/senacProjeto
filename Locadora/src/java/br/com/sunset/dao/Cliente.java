@@ -31,8 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Cliente.findByIdCliente", query = "SELECT c FROM Cliente c WHERE c.idCliente = :idCliente"),
     @NamedQuery(name = "Cliente.findByNomeCliente", query = "SELECT c FROM Cliente c WHERE c.nomeCliente = :nomeCliente"),
     @NamedQuery(name = "Cliente.findByEnderecoCliente", query = "SELECT c FROM Cliente c WHERE c.enderecoCliente = :enderecoCliente"),
-    @NamedQuery(name = "Cliente.findByIdCidade", query = "SELECT c FROM Cliente c WHERE c.idCidade = :idCidade"),
-    @NamedQuery(name = "Cliente.findByIdBairro", query = "SELECT c FROM Cliente c WHERE c.idBairro = :idBairro"),
+    @NamedQuery(name = "Cliente.findByCidade", query = "SELECT c FROM Cliente c WHERE c.cidade = :cidade"),
     @NamedQuery(name = "Cliente.findByCpfCliente", query = "SELECT c FROM Cliente c WHERE c.cpfCliente = :cpfCliente"),
     @NamedQuery(name = "Cliente.findByTelefoneCliente", query = "SELECT c FROM Cliente c WHERE c.telefoneCliente = :telefoneCliente"),
     @NamedQuery(name = "Cliente.findByStatusCliente", query = "SELECT c FROM Cliente c WHERE c.statusCliente = :statusCliente")})
@@ -56,12 +55,9 @@ public class Cliente implements Serializable {
     private String enderecoCliente;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "id_cidade")
-    private int idCidade;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "id_bairro")
-    private int idBairro;
+    @Size(min = 1, max = 30)
+    @Column(name = "cidade")
+    private String cidade;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
@@ -85,12 +81,11 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public Cliente(Integer idCliente, String nomeCliente, String enderecoCliente, int idCidade, int idBairro, String cpfCliente, String telefoneCliente, String statusCliente) {
+    public Cliente(Integer idCliente, String nomeCliente, String enderecoCliente, String cidade, String cpfCliente, String telefoneCliente, String statusCliente) {
         this.idCliente = idCliente;
         this.nomeCliente = nomeCliente;
         this.enderecoCliente = enderecoCliente;
-        this.idCidade = idCidade;
-        this.idBairro = idBairro;
+        this.cidade = cidade;
         this.cpfCliente = cpfCliente;
         this.telefoneCliente = telefoneCliente;
         this.statusCliente = statusCliente;
@@ -120,20 +115,12 @@ public class Cliente implements Serializable {
         this.enderecoCliente = enderecoCliente;
     }
 
-    public int getIdCidade() {
-        return idCidade;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setIdCidade(int idCidade) {
-        this.idCidade = idCidade;
-    }
-
-    public int getIdBairro() {
-        return idBairro;
-    }
-
-    public void setIdBairro(int idBairro) {
-        this.idBairro = idBairro;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
     public String getCpfCliente() {

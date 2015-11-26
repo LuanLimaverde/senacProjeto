@@ -31,9 +31,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Filme.findAll", query = "SELECT f FROM Filme f"),
     @NamedQuery(name = "Filme.findByIdFilme", query = "SELECT f FROM Filme f WHERE f.idFilme = :idFilme"),
     @NamedQuery(name = "Filme.findByNomeFilme", query = "SELECT f FROM Filme f WHERE f.nomeFilme = :nomeFilme"),
-    @NamedQuery(name = "Filme.findByIdGenero", query = "SELECT f FROM Filme f WHERE f.idGenero = :idGenero"),
+    @NamedQuery(name = "Filme.findByGenero", query = "SELECT f FROM Filme f WHERE f.genero = :genero"),
     @NamedQuery(name = "Filme.findByEstoque", query = "SELECT f FROM Filme f WHERE f.estoque = :estoque"),
-    @NamedQuery(name = "Filme.findByIdClasse", query = "SELECT f FROM Filme f WHERE f.idClasse = :idClasse")})
+    @NamedQuery(name = "Filme.findByClasse", query = "SELECT f FROM Filme f WHERE f.classe = :classe")})
 public class Filme implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -44,21 +44,23 @@ public class Filme implements Serializable {
     private Integer idFilme;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 20)
+    @Size(min = 1, max = 50)
     @Column(name = "nomeFilme")
     private String nomeFilme;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "id_Genero")
-    private int idGenero;
+    @Size(min = 1, max = 30)
+    @Column(name = "genero")
+    private String genero;
     @Basic(optional = false)
     @NotNull
     @Column(name = "estoque")
     private int estoque;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "id_Classe")
-    private int idClasse;
+    @Size(min = 1, max = 30)
+    @Column(name = "classe")
+    private String classe;
     @Basic(optional = false)
     @NotNull
     @Lob
@@ -73,12 +75,12 @@ public class Filme implements Serializable {
         this.idFilme = idFilme;
     }
 
-    public Filme(Integer idFilme, String nomeFilme, int idGenero, int estoque, int idClasse, String descricao) {
+    public Filme(Integer idFilme, String nomeFilme, String genero, int estoque, String classe, String descricao) {
         this.idFilme = idFilme;
         this.nomeFilme = nomeFilme;
-        this.idGenero = idGenero;
+        this.genero = genero;
         this.estoque = estoque;
-        this.idClasse = idClasse;
+        this.classe = classe;
         this.descricao = descricao;
     }
 
@@ -98,12 +100,12 @@ public class Filme implements Serializable {
         this.nomeFilme = nomeFilme;
     }
 
-    public int getIdGenero() {
-        return idGenero;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setIdGenero(int idGenero) {
-        this.idGenero = idGenero;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public int getEstoque() {
@@ -114,12 +116,12 @@ public class Filme implements Serializable {
         this.estoque = estoque;
     }
 
-    public int getIdClasse() {
-        return idClasse;
+    public String getClasse() {
+        return classe;
     }
 
-    public void setIdClasse(int idClasse) {
-        this.idClasse = idClasse;
+    public void setClasse(String classe) {
+        this.classe = classe;
     }
 
     public String getDescricao() {

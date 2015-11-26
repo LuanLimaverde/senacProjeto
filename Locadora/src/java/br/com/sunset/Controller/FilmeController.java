@@ -45,6 +45,7 @@ public class FilmeController {
             GeneroJpaModel GeneroModel = new GeneroJpaModel(emg);
             List<Genero> genero = GeneroModel.findGeneroEntities();
             result.include("genero", genero);
+           
             
             EntityManagerFactory emc = Persistence.createEntityManagerFactory("SenacPU");
             ClasseJpaModel ClasseModel = new ClasseJpaModel(emc);
@@ -124,7 +125,7 @@ public class FilmeController {
             
                 result.include("ap", e);
             }
-            result.redirectTo(FilmeController.class).listar();
+            result.redirectTo(FilmeController.class).cadastro();
         }
         
         
