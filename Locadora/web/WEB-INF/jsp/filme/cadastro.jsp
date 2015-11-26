@@ -10,7 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="<c:url value='/assets/estilo/style.css' />">
-        <title>JSP Page</title>
+        <link rel="shortcut icon" href="<c:url value='/assets/img/sun.png' />">
+        <title>Gerenciador de filmes</title>
         <script>
              function deletar(id){
                  var confirmacao = confirm("Deseja excluir o filme?");
@@ -20,21 +21,25 @@
              }
          </script>
     </head>
-    <body>
-        <div name="cabeçote" style="width:100%; height: 150px ;border: 1px solid #000;"></div>    
-    <div style="width:900px; height: 450px ; margin-top: 30px; float:left;">
+    <body style="background-color:#F08080; ">
+    
+    <img width="100%"src="<c:url value="/assets/img/banner.bmp"/>">
+       
+    <div id="lista" >
         <center><h1>Lista de Filmes</h1></center>
         <hr>
-        <table border='0px' width='100%' text-align='center'>
+        <table border='0px' width='850px' style="margin-left: 20px;" text-align='center'>
             <tr>
-                <td>NOME</td>
-                <td>GÊNERO</td>
-                <td>ESTOQUE</td>
-                <td>CLASSE</td>
-                <td>DESCRIÇÃO</td>
-                <td>EDITAR</td>
-                <td>EXCLUIR</td>
+                <td><b>NOME</b></td>
+                <td><b>GÊNERO</b></td>
+                <td><b>ESTOQUE</b></td>
+                <td><b>CLASSE</b></td>
+                <td><b>DESCRIÇÃO</b></td>
+                <td><b>EDITAR</b></td>
+                <td><b>EXCLUIR</b></td>
+                  
             </tr>
+         
         <c:forEach var="filmes" items="${filmes}">
             <tr>
                 <td>${filmes.nomeFilme}</td>
@@ -49,10 +54,10 @@
         </c:forEach>
          </table>    
     </div>    
-        <div align="center" style="width:400px; margin-top: 100px; margin-left: 20px; height: 600px ;float:left; ">    
+        <div id="cad" align="center">    
         <form name="filmeCad" action="<c:url value='/filme/salvar' />"  method="POST">
             
-            <table border="0">
+            <table border="0" style="margin-top: 100px;">
                 <thead>
                     <tr>
                 <h1> <th colspan="2" align="center"> CADASTRAR </th> </h1> 

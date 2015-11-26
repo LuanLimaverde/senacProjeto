@@ -7,6 +7,27 @@ and open the template in the editor.
     Created on : 25/11/2015, 15:34:18
     Author     : Luuher
 */
+#lista{
+   
+    border-style: groove;
+    background-color: #FFDEAD;
+    width:900px; 
+    height: 450px ;
+    margin-top: 10px; 
+    float:left;
+    overflow: scroll;
+ 
+}
+#cad{
+    width:400px;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 450px ;
+    float:left;
+    border-style: groove;
+    background-color: #FFDEAD;
+}
+
 .cadastroFilme{
     margin: auto;
     width: 200px;
