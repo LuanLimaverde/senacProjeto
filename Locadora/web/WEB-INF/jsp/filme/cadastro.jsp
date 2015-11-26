@@ -28,7 +28,7 @@
         <c:forEach var="filmes" items="${filmes}">
             <tr>
                 <td>${filmes.nomeFilme}</td>
-                <td>${filmes.idGenero}</td>
+                <td>${filmes.idGenero}</td>    
                 <td>${filmes.estoque}</td>
                 <td>${filmes.idClasse}</td>
                 <td>${filmes.descricao}</td>
