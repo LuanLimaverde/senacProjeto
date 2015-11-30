@@ -10,7 +10,7 @@ and open the template in the editor.
 #lista{
    
     border-style: groove;
-    background-color: #FFDEAD;
+ 
     width:900px; 
     height: 450px ;
     margin-top: 10px; 
@@ -25,7 +25,7 @@ and open the template in the editor.
     height: 450px ;
     float:left;
     border-style: groove;
-    background-color: #FFDEAD;
+   
 }
 
 .cadastroFilme{

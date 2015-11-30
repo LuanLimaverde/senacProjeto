@@ -11,6 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="<c:url value='/assets/estilo/style.css' />">
         <link rel="shortcut icon" href="<c:url value='/assets/img/sun.png' />">
+        <link href="<c:url value="/assets/css/bootstrap.css" />" rel="stylesheet" type="text/css"/>
+        <script src="<c:url value="/assets/js/bootstrap.js" />"" type="text/javascript"></script>
+        <script src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
         <title>Gerenciador de filmes</title>
         <script>
              function deletar(id){
@@ -21,9 +24,9 @@
              }
          </script>
     </head>
-    <body style="background-color:#F08080; ">
+    <body >
     
-    <img width="100%"src="<c:url value="/assets/img/banner.bmp"/>">
+  
        
     <div id="lista" >
         <center><h1>Lista de Filmes</h1></center>
@@ -41,7 +44,10 @@
             </tr>
          
         <c:forEach var="filmes" items="${filmes}">
-            <tr>
+            <c:if test="(filmes.idFilme % 2) == 0">
+                <% String teste = "active";%>
+            </c:if>
+            <tr class=${teste}>
                 <td>${filmes.nomeFilme}</td>
                 <td>${filmes.genero}</td>
                 <td>${filmes.estoque}</td>

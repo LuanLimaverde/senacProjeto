@@ -17,6 +17,7 @@
 package br.com.sunset.Controller;
 
 import br.com.caelum.vraptor.Path;
+import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 
@@ -33,5 +34,17 @@ public class HomeController {
 	public void index() {
 		result.include("variable", "VRaptor!");
 	}
-
+        
+        @Path("/home/destaque")
+        public void destaque(){
+            
+        }
+        
+        @Post
+        @Path("/home/logar")
+        public void logar(){
+           
+            result.include("login", "teste");
+            result.redirectTo(HomeController.class).index();
+        }
 }
