@@ -218,15 +218,15 @@
                         <h4 class="modal-title" align="center"> #04 Homem de Ferro 2</h4>
                     </div>
                     <div class="modal-body" align="center">
-                        <p><img src="<c:url value="/assets/img/capas/.jpg"/>" alt="...">	</p>
-                        <p> Lançamento:13 de junho de 2008 (1h52min)  </p>
-                            <p>Dirigido por:	Louis Leterrier</p>
-                            <p>Com	Edward Norton, Liv Tyler, Tim Roth</p>
-                            <p>Gênero:	Ação , Fantasia</p>
+                        <p><img src="<c:url value="/assets/img/capas/homemferro2.jpg"/>" alt="...">	</p>
+                        <p> Lançamento: 30 de abril de 2010 (1h57min)   </p>
+                            <p>Dirigido por:	Jon Favreau</p>
+                            <p>Com	Robert Downey Jr., Don Cheadle, Scarlett Johansson </p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
                             <p> Nacionalidade:	EUA </p>
                             <p> Classe: Bronze </p> 
                             <p><b>Sinopse:</b></p>
-                            <p>Vivendo escondido e longe de Betty Ross (Liv Tyler), a mulher que ama, o cientista Bruce Banner (Edward Norton) busca um meio de retirar a radiação gama que está em seu sangue. Ao mesmo tempo ele precisa fugir da perseguição do general Ross (William Hurt), seu grande inimigo, e da máquina militar que tenta capturá-lo, na intenção de explorar o poder que faz com que Banner se transforme no Hulk.</p>
+                            <p>Após confessar ao mundo ser o Homem de Ferro, Tony Stark (Robert Downey Jr.) passa a ser alvo do governo dos Estados Unidos, que deseja que ele entregue seu poderoso traje. Com a negativa, o governo passa a desenvolver um novo traje com o maior rival de Stark, Justin Hammer (Sam Rockwell). Jim Rhodes (Don Cheadle), o braço direito de Tony, é colocado no centro deste conflito, o que faz com que assuma a identidade de Máquina de Combate. Paralelamente, Ivan Vanko (Mickey Rourke) cria o alter-ego de Whiplash para se vingar dos atos da família Stark no passado. Para combater Whiplash e a perseguição do governo, Stark conta com o apoio de sua nova assistente, Natasha Romanoff (Scarlett Johansson), e de Nick Fury (Samuel L. Jackson), o diretor da S.H.I.E.L.D.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -235,8 +235,61 @@
 
             </div>
         </div>                  
-                        
-    </div>                  
+        <div id="05" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #05 Thor</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/thor1.jpg"/>" alt="...">	</p>
+                        <p> Lançamento: 29 de abril de 2011 (1h54min)    </p>
+                            <p>Dirigido por: Kenneth Branagh</p>
+                            <p>Com	Chris Hemsworth, Natalie Portman, Anthony Hopkins</p>
+                            <p>Gênero:	Ação , Fantasia , Aventura</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Thor (Chris Hemsworth) estava prestes a receber o comando de Asgard das mãos de seu pai Odin (Anthony Hopkins) quando forças inimigas quebraram um acordo de paz. Disposto a se vingar do ocorrido, o jovem guerreiro desobedece as ordens do rei e quase dá início a uma nova guerra entre os reinos. Enfurecido com a atitude do filho e herdeiro, Odin retira seus poderes e o expulsa para a Terra. Lá, Thor acaba conhecendo a cientista Jane Foster (Natalie Portman) e precisa recuperar seu martelo, enquanto seu irmão Loki (Tom Hiddleston) elabora um plano para assumir o poder. Mas os guerreiros do Deus do Trovão fazem a mesma viagem para buscar o amigo e impedir que isso aconteça. Só que eles não vieram sozinhos e o inimigo está presente para uma batalha que está apenas começando.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>  
+         <div id="06" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #06 Os Vingadores</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/vingadores.jpg"/>" alt="...">	</p>
+                        <p> Lançamento: 27 de abril de 2012 (2h22min)     </p>
+                            <p>Dirigido por: Joss Whedon</p>
+                            <p>Com	Robert Downey Jr., Chris Evans, Mark Ruffalo</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Loki (Tom Hiddleston) retorna à Terra enviado pelos chitauri, uma raça alienígena que pretende dominar os humanos. Com a promessa de que será o soberano do planeta, ele rouba o cubo cósmico dentro de instalações da S.H.I.E.L.D. e, com isso, adquire grandes poderes. Loki os usa para controlar o dr. Erik Selvig (Stellan Skarsgard) e Clint Barton/Gavião Arqueiro (Jeremy Renner), que passam a trabalhar para ele. No intuito de contê-los, Nick Fury (Samuel L. Jackson) convoca um grupo de pessoas com grandes habilidades, mas que jamais haviam trabalhado juntas: Tony Stark/Homem de Ferro (Robert Downey Jr.), Steve Rogers/Capitão América (Chris Evans), Thor (Chris Hemsworth), Bruce Banner/Hulk (Mark Ruffalo) e Natasha Romanoff/Viúva Negra (Scarlett Johansson). Só que, apesar do grande perigo que a Terra corre, não é tão simples assim conter o ego e os interesses de cada um deles para que possam agir em grupo.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+                        
+    </div>                 
 </body>
 </html>
