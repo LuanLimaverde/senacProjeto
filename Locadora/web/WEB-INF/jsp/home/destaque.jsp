@@ -137,13 +137,15 @@
                         <h4 class="modal-title" align="center"> #01 C.América: O Primeiro Vingador </h4>
                     </div>
                     <div class="modal-body" align="center">
-                        <p>	</p>
+                        <p><img src="<c:url value="/assets/img/capas/capitaoamerica1.jpg"/>" alt="...">	</p>
                         <p> Lançamento:	29 de julho de 2011 (2h3min) </p>
                             <p>Dirigido por:	Joe Johnston</p>
                             <p>Com	Chris Evans, Hayley Atwell, Sebastian Stan </p>
                             <p>Gênero:	Ação , Aventura , Ficção científica</p>
                             <p> Nacionalidade:	EUA </p>
                             <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>2ª Guerra Mundial. Steve Rogers (Chris Evans) é um jovem que aceitou ser voluntário em uma série de experiências que visam criar o supersoldado americano. Os militares conseguem transformá-lo em uma arma humana, mas logo percebem que o supersoldado é valioso demais para pôr em risco na luta contra os nazistas. Desta forma, Rogers é usado como uma celebridade do exército, marcando presença em paradas realizadas pela Europa no intuito de levantar a estima dos combatentes. Para tanto passa a usar uma vestimenta com as cores da bandeira dos Estados Unidos, azul, branca e vermelha. Só que um plano nazista faz com que Rogers entre em ação e assuma a alcunha de Capitão América, usando seus dons para combatê-los em plenas trincheiras da guerra.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
