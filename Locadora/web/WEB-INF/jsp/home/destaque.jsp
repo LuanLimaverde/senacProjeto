@@ -208,7 +208,33 @@
 
             </div>
         </div>                
-                        
+        <div id="04" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #04 Homem de Ferro 2</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:13 de junho de 2008 (1h52min)  </p>
+                            <p>Dirigido por:	Louis Leterrier</p>
+                            <p>Com	Edward Norton, Liv Tyler, Tim Roth</p>
+                            <p>Gênero:	Ação , Fantasia</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Vivendo escondido e longe de Betty Ross (Liv Tyler), a mulher que ama, o cientista Bruce Banner (Edward Norton) busca um meio de retirar a radiação gama que está em seu sangue. Ao mesmo tempo ele precisa fugir da perseguição do general Ross (William Hurt), seu grande inimigo, e da máquina militar que tenta capturá-lo, na intenção de explorar o poder que faz com que Banner se transforme no Hulk.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>                  
                         
     </div>                  
 

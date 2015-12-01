@@ -45,6 +45,6 @@ public class HomeController {
         public void logar(){
            
             result.include("login", "teste");
-            result.redirectTo(ClienteController.class).cadastro();
+            result.redirectTo(FilmeController.class).cadastro();
         }
 }
