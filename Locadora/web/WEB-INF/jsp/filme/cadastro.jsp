@@ -44,10 +44,8 @@
             </tr>
          
         <c:forEach var="filmes" items="${filmes}">
-            <c:if test="(filmes.idFilme % 2) == 0">
-                <% String teste = "active";%>
-            </c:if>
-            <tr class=${teste}>
+          
+            <tr>
                 <td>${filmes.nomeFilme}</td>
                 <td>${filmes.genero}</td>
                 <td>${filmes.estoque}</td>
