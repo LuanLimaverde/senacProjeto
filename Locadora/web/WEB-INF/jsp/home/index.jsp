@@ -18,7 +18,7 @@
 
                 </div></center>
 
-        </c:if>      
+        </c:if>  
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -36,12 +36,12 @@
                         <ul style="margin-top:7px;">
                             <form class="form-inline" action="<c:url value="/home/logar"/>" method="POST">
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputEmail3">Email de Acesso</label>
-                                    <input type="email" class="form-control" name="login"  placeholder="Email">
+                                    <label class="sr-only" for="exampleInputEmail3">Código de Acesso</label>
+                                    <input type="text" class="form-control" name="login.idLogin"  placeholder="Código">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                    <input type="password" class="form-control" name="senha"  placeholder="Senha">
+                                    <input type="password" class="form-control" name="login.senha"  placeholder="Senha">
                                 </div>
                                 <button type="submit" class="btn btn-default">Acessar</button>
                             </form> 

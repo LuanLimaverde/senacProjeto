@@ -12,15 +12,7 @@
         <title>SunsetFilmes</title>
     </head>
     <body style="background-image: url(<c:url value='/assets/img/civilwar_1.jpg'/>); background-attachment:fixed;background-size:cover; background-repeat:no-repeat">
-
-        <c:if test="${not empty login}">
-            <center><div class="alert alert-danger alert-dismissible" role="alert">
-
-                    <strong>Acesso Negado!</strong> Email e senha não correspondentes.
-
-                </div></center>
-
-        </c:if>      
+    
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">

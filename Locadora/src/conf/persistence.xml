@@ -7,9 +7,9 @@
     <class>br.com.sunset.dao.Classe</class>
     <class>br.com.sunset.dao.Devolutiva</class>
     <class>br.com.sunset.dao.Genero</class>
-    <class>br.com.sunset.dao.Login</class>
     <class>br.com.sunset.dao.Cliente</class>
     <class>br.com.sunset.dao.Locatoria</class>
+    <class>br.com.sunset.dao.Login</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sunsetdb?zeroDateTimeBehavior=convertToNull"/>

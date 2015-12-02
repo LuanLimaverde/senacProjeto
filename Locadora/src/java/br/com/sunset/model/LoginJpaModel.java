@@ -7,6 +7,7 @@ package br.com.sunset.model;
 
 import br.com.sunset.dao.Login;
 import br.com.sunset.model.exceptions.NonexistentEntityException;
+import br.com.sunset.model.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -31,13 +32,18 @@ public class LoginJpaModel implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Login login) {
+    public void create(Login login) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             em.persist(login);
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            if (findLogin(login.getIdLogin()) != null) {
+                throw new PreexistingEntityException("Login " + login + " already exists.", ex);
+            }
+            throw ex;
         } finally {
             if (em != null) {
                 em.close();

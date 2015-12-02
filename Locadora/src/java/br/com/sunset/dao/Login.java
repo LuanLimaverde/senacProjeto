@@ -9,13 +9,12 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -28,20 +27,21 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Login.findAll", query = "SELECT l FROM Login l"),
     @NamedQuery(name = "Login.findByIdLogin", query = "SELECT l FROM Login l WHERE l.idLogin = :idLogin"),
-    @NamedQuery(name = "Login.findByLogin", query = "SELECT l FROM Login l WHERE l.login = :login"),
+    @NamedQuery(name = "Login.findByNome", query = "SELECT l FROM Login l WHERE l.nome = :nome"),
     @NamedQuery(name = "Login.findBySenha", query = "SELECT l FROM Login l WHERE l.senha = :senha")})
 public class Login implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
+    @NotNull
     @Column(name = "idLogin")
     private Integer idLogin;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "login")
-    private int login;
+    @Size(min = 1, max = 11)
+    @Column(name = "nome")
+    private String nome;
     @Basic(optional = false)
     @NotNull
     @Column(name = "senha")
@@ -54,9 +54,9 @@ public class Login implements Serializable {
         this.idLogin = idLogin;
     }
 
-    public Login(Integer idLogin, int login, int senha) {
+    public Login(Integer idLogin, String nome, int senha) {
         this.idLogin = idLogin;
-        this.login = login;
+        this.nome = nome;
         this.senha = senha;
     }
 
@@ -68,12 +68,12 @@ public class Login implements Serializable {
         this.idLogin = idLogin;
     }
 
-    public int getLogin() {
-        return login;
+    public String getNome() {
+        return nome;
     }
 
-    public void setLogin(int login) {
-        this.login = login;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getSenha() {
