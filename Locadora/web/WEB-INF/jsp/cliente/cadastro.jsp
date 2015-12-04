@@ -10,18 +10,69 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="<c:url value='/assets/estilo/style.css' />">
+        <link rel="shortcut icon" href="<c:url value='/assets/img/sun.png' />">
+        <link href="<c:url value="/assets/css/bootstrap.css" />" rel="stylesheet" type="text/css"/>
+        <script src="<c:url value="/assets/js/bootstrap.js" />"" type="text/javascript"></script>
+        <script src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
         <title>Cadastro de Clientes</title>
+        <script>
+            function deletar(id) {
+                var confirmacao = confirm("Deseja excluir o cliente?");
+                if (confirmacao) {
+                    location.href = "<c:url value='/cliente/deletar' />/" + id;
+                }
+            }
+        </script>
     </head>
     <body>
-        <form name="ClienteCad" action="<c:url value='/cliente/salvar'/>" method="POST">
-            <table border="0">
-                <thead>
-                    <tr>                        
-                        <th>Cadastro de Clientes</th>
+
+        <%-- Listar os Clientes Cadastrasdos --%>
+
+        <div id="lista" >
+            <center><h1>Lista de Clientes</h1></center>
+            <hr>
+            <table border='0px' width='850px' style="margin-left: 20px;" text-align='center'>
+                <tr>
+                    <td><b>NOME</b></td>
+                    <td><b>ENDEREÇO</b></td>
+                    <td><b>CIDADE</b></td>
+                    <td><b>CPF</b></td>
+                    <td><b>TELEFONE</b></td>
+                    <td><b>STATUS DO CLIENTE</b></td>
+                    <td><b>EDITAR</b></td>
+                    <td><b>EXCLUIR</b></td>                  
+                </tr>
+
+                <c:forEach var="cliente" items="${cliente}">
+
+                    <tr>
+                        <td>${cliente.nomeCliente}</td>
+                        <td>${cliente.enderecoCliente}</td>
+                        <td>${cliente.cidade}</td>
+                        <td>${cliente.cpfCliente}</td>
+                        <td>${cliente.telefoneCliente}</td>
+                        <td>${cliente.statusCliente}</td>
+                        <td><a href="<c:url value="/cliente/editar" />/${cliente.idCliente}"><img src="<c:url value="/assets/img/edit.png"/>"></a></td>
+                        <td><a href="javascript:func()" onclick="deletar(${cliente.idCliente})"> <img src="<c:url value='/assets/img/delete.png'/>"</a></td>    
+
                     </tr>
-                </thead>
-                <tbody>
-                    <%-- <input type="hidden" name="idCliente" value="<c:if test="${not empty cliente.idCliente}">${cliente.idCliente}</c:if>"/> --%>
+                </c:forEach>
+            </table>    
+        </div>    
+
+        <%-- Cadastrar os Clientes --%>
+
+        <div id="cad" align="center">    
+            <form name="ClienteCad" action="<c:url value='/cliente/salvar'/>" method="POST">
+                <table border="0">
+                    <thead>
+                        <tr>                        
+                            <th>Cadastro de Clientes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%-- <input type="hidden" name="idCliente" value="<c:if test="${not empty cliente.idCliente}">${cliente.idCliente}</c:if>"/> --%>
                     <input type="hidden" name="cliente.idCliente" value=""/>
                     <tr>
                         <td>Nome</td>
@@ -56,10 +107,10 @@
                     <tr>                        
                         <td colspan="2" align='center'><input type="submit" value="Salvar" /></td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-        </form>
-
+            </form>
+        </div>
     </body>
 </html>

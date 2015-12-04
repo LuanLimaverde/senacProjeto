@@ -80,53 +80,45 @@ public class ClienteController {
 		
 	}
         
-        @Path("/filme/listar")
+*/
+        @Path("/cliente/listar")
         public void listar(){
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
-            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
-            List<Filme> filme = filmeModel.findFilmeEntities();
-            result.include("filme", filme);
-            
-            EntityManagerFactory emg = Persistence.createEntityManagerFactory("SenacPU");
-            GeneroJpaModel GeneroModel = new GeneroJpaModel(emg);
-            List<Genero> genero = GeneroModel.findGeneroEntities();
-            result.include("genero", genero);
-            
-            EntityManagerFactory emc = Persistence.createEntityManagerFactory("SenacPU");
-            ClasseJpaModel ClasseModel = new ClasseJpaModel(emc);
-            List<Classe> classe = ClasseModel.findClasseEntities();
-            result.include("classe", classe);
+            ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
+            List<Cliente> cliente = clienteModel.findClienteEntities();
+            result.include("cliente", cliente);                        
         }
         
        
         
-        @Get("/filme/editar/{id}")
+        @Get("/cliente/editar/{id}")
         public void editar(Integer id){
             
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
-            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
-            Filme filme = filmeModel.findFilme(id);
+            ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
+            Cliente cliente = clienteModel.findCliente(id);
             
             result.include("t2", "Alterar");
-            result.include("filme", filme);
-            result.redirectTo(FilmeController.class).cadastro();
+            result.include("cliente", cliente);
+            result.redirectTo(ClienteController.class).cadastro();
             
         }
         
-        @Get("/filme/deletar/{id}")
+        
+        @Get("/cliente/deletar/{id}")
         public void deletar(Integer id){
             
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
-            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
+            ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
             
             try {
-                filmeModel.destroy(id);
+                clienteModel.destroy(id);
                 result.include("ap", "Deletado com Sucesso");
             } catch (Exception e) {
             
                 result.include("ap", e);
             }
-            result.redirectTo(FilmeController.class).cadastro();
+            result.redirectTo(ClienteController.class).cadastro();
         }
-    */
+    
 }
