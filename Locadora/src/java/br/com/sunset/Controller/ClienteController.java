@@ -38,7 +38,10 @@ public class ClienteController {
         
         @Path("/cliente/cadastro")
         public void cadastro(){
-            
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
+            ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
+            List<Cliente> cliente = clienteModel.findClienteEntities();
+            result.include("cliente", cliente);   
         }
         
         @Post

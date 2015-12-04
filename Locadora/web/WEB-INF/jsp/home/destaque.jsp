@@ -281,7 +281,168 @@
 
             </div>
         </div> 
-                        
+        <div id="07" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #07 O Homem de Ferro 2</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/homemferro2.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Após confessar ao mundo ser o Homem de Ferro, Tony Stark (Robert Downey Jr.) passa a ser alvo do governo dos Estados Unidos, que deseja que ele entregue seu poderoso traje. Com a negativa, o governo passa a desenvolver um novo traje com o maior rival de Stark, Justin Hammer (Sam Rockwell). Jim Rhodes (Don Cheadle), o braço direito de Tony, é colocado no centro deste conflito, o que faz com que assuma a identidade de Máquina de Combate. Paralelamente, Ivan Vanko (Mickey Rourke) cria o alter-ego de Whiplash para se vingar dos atos da família Stark no passado. Para combater Whiplash e a perseguição do governo, Stark conta com o apoio de sua nova assistente, Natasha Romanoff (Scarlett Johansson), e de Nick Fury (Samuel L. Jackson), o diretor da S.H.I.E.L.D.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <div id="08" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #08 Thor: O Mundo Sombrio</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/thor2.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Enquanto Thor (Chris Hemsworth) liderava as últimas batalhas para conquistar a paz entre os Nove Reinos, o maldito elfo negro Malekith (Christopher Eccleston) acordava de um longo sono, sedento de vingança e louco para levar todos para a escuridão eterna. Alertado do perigo por Odin (Anthony Hopkins), o herói precisa contar com a ajuda dos companheiros Volstagg (Ray Stevenson), Sif (Jaimie Alexander), entre outros, e até de seu irmão, o traiçoeiro Loki (Tom Hiddleston), em um plano audacioso para salvar o universo do grande mal. Mas os caminhos de Thor e da amada Jane Foster (Natalie Portman) se cruzam novamente e, dessa vez, a vida dela está realmente em perigo.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="09" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #09 Capitao America: O soldado Invernal</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/thor2.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Dois anos após os acontecimentos em Nova York (Os Vingadores - The Avengers), Steve Rogers (Chris Evans) continua seu dedicado trabalho com a agência S.H.I.E.L.D. e também segue tentando se acostumar com o fato de que foi descongelado e acordou décadas depois de seu tempo. Em parceria com Natasha Romanoff (Scarlett Johansson), também conhecida como Viúva Negra, ele é obrigado a enfrentar um poderoso e misterioso inimigo chamado Soldado Invernal, que visita Washington e abala o dia a dia da S.H.I.E.L.D., ainda liderada por Nick Fury (Samuel L. Jackson).</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="10" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #10 Guardiões da Galáxia</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/guardiao.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Peter Quill (Chris Pratt) foi abduzido da Terra quando ainda era criança. Adulto, fez carreira como saqueador e ganhou o nome de Senhor das Estrelas. Quando rouba uma esfera, na qual o poderoso vilão Ronan, da raça kree, está interessado, passa a ser procurado por vários caçadores de recompensas. Para escapar do perigo, Quill une forças com quatro personagens fora do sistema: Groot, uma árvore humanóide (Vin Diesel), a sombria e perigosa Gamora (Zoe Saldana), o guaxinim rápido no gatilho Rocket Racoon (Bradley Cooper) e o vingativo Drax, o Destruidor (Dave Bautista). Mas o Senhor das Estrelas descobre que a esfera roubada possui um poder capaz de mudar os rumos do universo, e logo o grupo deverá proteger o objeto para salvar o futuro da galáxia.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <div id="11" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #11 Os Vingadores: Era de Ultron</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/vingadores2.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Tentanto proteger o planeta de ameaças como as vistas no primeiro Os Vingadores, Tony Stark busca construir um sistema de inteligência artifical que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron (voz de James Spader). Capitão América (Chris Evans), Homem de Ferro (Robert Downey Jr.), Thor (Chris Hemsworth), Hulk (Mark Ruffalo), Viúva Negra (Scarlett Johansson) e Gavião Arqueiro (Jeremy Renner) terão que se unir para mais uma vez salvar o dia</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+        <div id="12" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> #12 Homem Formiga</h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/capas/formiga.jpg"/>" alt="...">	</p>
+                        <p> Lançamento:	30 de abril de 2010 (1h57min)      </p>
+                            <p>Dirigido por: 	Jon Favreau</p>
+                            <p>Com    Robert Downey Jr., Don Cheadle, Scarlett Johansson</p>
+                            <p>Gênero:	Ação , Aventura , Ficção científica</p>
+                            <p> Nacionalidade:	EUA </p>
+                            <p> Classe: Bronze </p> 
+                            <p><b>Sinopse:</b></p>
+                            <p>Dr. Hank Pym (Michael Douglas), o inventor da fórmula/ traje que permite o encolhimento, anos depois da descoberta, precisa impedir que seu ex-pupilo Darren Cross (Corey Stoll), consiga replicar o feito e vender a tecnologia para uma organização do mal. Depois de sair da cadeia, o trambiqueiro Scott Lang (Paul Rudd) está disposto a reconquistar o respeito da ex-mulher, Maggie (Judy Greer) e, principalmente, da filha. Com dificuldades de arrumar um emprego honesto, ele aceita praticar um último golpe. O que ele não sabia era que tudo não passava de um plano do Dr. Pym que, depois de anos observando o hábil ladrão, o escolhe para vestir o traje do Homem-Formiga.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>                 
     </div>                 
 </body>
 </html>
