@@ -26,13 +26,26 @@
         </script>
     </head>
     <body>
+<nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">  
+                    <a class="navbar-brand" href="#" style="margin-right: 320px;">Sunset Filmes</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="<c:url value="/filme/cadastro"/>">Gerenciar Filmes</a></li>
+                        <li class="active"><a href="<c:url value="/cliente/cadastro"/>">Gerenciar Clientes</a></li>
+                        <li><a href="#" style="margin-right:380px; ">Locartória</a></li>
+                        <li><a href="<c:url value="/"/>">Retornar</a></li>
 
+                </div>
+            </div>                    
+        </nav>
         <%-- Listar os Clientes Cadastrasdos --%>
 
-        <div id="lista" >
-            <center><h1>Lista de Clientes</h1></center>
-            <hr>
-            <table border='0px' width='850px' style="margin-left: 20px;" text-align='center'>
+        <div id="lista" class="panel-default panel panel-primary" >
+            <div class="panel-heading"><center><h1>Lista de Clientes</h1></center></div>   
+            <table class="table-striped table table-hover" border='0px' width='100%' style="" text-align='center'>
                 <tr>
                     <td><b>NOME</b></td>
                     <td><b>ENDEREÇO</b></td>
@@ -63,13 +76,12 @@
 
         <%-- Cadastrar os Clientes --%>
 
-        <div id="cad" align="center">    
+        <div id="cad" align="center" class="panel panel-primary panel-default ">   
+             <div class="panel-heading"><center><h1>Cadastrar</h1></center></div> 
             <form name="ClienteCad" action="<c:url value='/cliente/salvar'/>" method="POST">
-                <table border="0">
+                <table border="0"  style="margin-top: 50px;">
                     <thead>
-                        <tr>                        
-                            <th>Cadastro de Clientes</th>
-                        </tr>
+                        
                     </thead>
                     <tbody>
                         <%-- <input type="hidden" name="idCliente" value="<c:if test="${not empty cliente.idCliente}">${cliente.idCliente}</c:if>"/> --%>
