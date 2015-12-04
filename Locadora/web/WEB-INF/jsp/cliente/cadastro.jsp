@@ -29,13 +29,14 @@
 <nav class="navbar navbar-default" >
             <div class="container-fluid">
                 <div class="navbar-header">  
-                    <a class="navbar-brand" href="#" style="margin-right: 320px;">Sunset Filmes</a>
+                    <a class="navbar-brand" href="#" style="margin-right: 250px;">Sunset Filmes</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li><a href="<c:url value="/usuario/cadastro"/>">Gerenciar Usuários</a></li>
                         <li><a href="<c:url value="/filme/cadastro"/>">Gerenciar Filmes</a></li>
                         <li class="active"><a href="<c:url value="/cliente/cadastro"/>">Gerenciar Clientes</a></li>
-                        <li><a href="#" style="margin-right:380px; ">Locartória</a></li>
+                        <li><a href="#" style="margin-right:250px; ">Locartória</a></li>
                         <li><a href="<c:url value="/"/>">Retornar</a></li>
 
                 </div>
@@ -57,17 +58,17 @@
                     <td><b>EXCLUIR</b></td>                  
                 </tr>
 
-                <c:forEach var="cliente" items="${cliente}">
+                <c:forEach var="clientes" items="${clientes}">
 
                     <tr>
-                        <td>${cliente.nomeCliente}</td>
-                        <td>${cliente.enderecoCliente}</td>
-                        <td>${cliente.cidade}</td>
-                        <td>${cliente.cpfCliente}</td>
-                        <td>${cliente.telefoneCliente}</td>
-                        <td>${cliente.statusCliente}</td>
-                        <td><a href="<c:url value="/cliente/editar" />/${cliente.idCliente}"><img src="<c:url value="/assets/img/edit.png"/>"></a></td>
-                        <td><a href="javascript:func()" onclick="deletar(${cliente.idCliente})"> <img src="<c:url value='/assets/img/delete.png'/>"</a></td>    
+                        <td>${clientes.nomeCliente}</td>
+                        <td>${clientes.enderecoCliente}</td>
+                        <td>${clientes.cidade}</td>
+                        <td>${clientes.cpfCliente}</td>
+                        <td>${clientes.telefoneCliente}</td>
+                        <td>${clientes.statusCliente}</td>
+                        <td><a href="<c:url value="/cliente/editar" />/${clientes.idCliente}"><img src="<c:url value="/assets/img/edit.png"/>"></a></td>
+                        <td><a href="javascript:func()" onclick="deletar(${clientes.idCliente})"> <img src="<c:url value='/assets/img/delete.png'/>"</a></td>    
 
                     </tr>
                 </c:forEach>
@@ -84,37 +85,37 @@
                         
                     </thead>
                     <tbody>
-                        <%-- <input type="hidden" name="idCliente" value="<c:if test="${not empty cliente.idCliente}">${cliente.idCliente}</c:if>"/> --%>
-                    <input type="hidden" name="cliente.idCliente" value=""/>
+                        
+                        <input type="hidden" name="cli.idCliente" value="<c:if test="${not empty cliente.idCliente}">${cliente.idCliente}</c:if>"/> 
                     <tr>
                         <td>Nome</td>
-                        <%-- <td><input type="text" name="nomeCliente"  value="<c:if test="${not empty cliente.nomeCliente}">${cliente.nomeCliente}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.nomeCliente"  value=""</td>
+                       <td><input type="text" name="cli.nomeCliente"  value="<c:if test="${not empty cliente.nomeCliente}">${cliente.nomeCliente}</c:if>"</td>
+                       
                     </tr>
                     <tr>
                         <td>Endereco</td>
-                        <%-- <td><input type="text" name="enderecoCliente"  value="<c:if test="${not empty cliente.enderecoCliente}">${cliente.enderecoCliente}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.enderecoCliente"  value=""</td>
+                        <td><input type="text" name="cli.enderecoCliente"  value="<c:if test="${not empty cliente.enderecoCliente}">${cliente.enderecoCliente}</c:if>"</td>
+                        
                     </tr>
                     <tr>
                         <td>Cidade</td>
-                        <%-- <td><input type="text" name="cidade"  value="<c:if test="${not empty cliente.cidade}">${cliente.cidade}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.cidade"  value=""</td>
+                        <td><input type="text" name="cli.cidade"  value="<c:if test="${not empty cliente.cidade}">${cliente.cidade}</c:if>"</td> 
+                        
                     </tr>
                     <tr>
                         <td>CPF</td>
-                        <%-- <td><input type="text" name="cpfCliente"  value="<c:if test="${not empty cliente.cpfCliente}">${cliente.cpfCliente}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.cpfCliente"  value=""</td>
+                         <td><input type="text" name="cli.cpfCliente"  value="<c:if test="${not empty cliente.cpfCliente}">${cliente.cpfCliente}</c:if>"</td> 
+                        
                     </tr>
                     <tr>
                         <td>Telefone</td>
-                        <%-- <td><input type="text" name="telefoneCliente"  value="<c:if test="${not empty cliente.telefoneCliente}">${cliente.telefoneCliente}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.telefoneCliente"  value=""</td>
+                        <td><input type="text" name="cli.telefoneCliente"  value="<c:if test="${not empty cliente.telefoneCliente}">${cliente.telefoneCliente}</c:if>"</td> 
+                        
                     </tr>
                     <tr>
                         <td>Status do Cliente</td>
-                        <%-- <td><input type="text" name="statusCliente"  value="<c:if test="${not empty cliente.statusCliente}">${cliente.statusCliente}</c:if>"</td> --%>
-                        <td><input type="text" name="cliente.statusCliente"  value=""</td>
+                        <td><input type="text" name="cli.statusCliente"  value="<c:if test="${not empty cliente.statusCliente}">${cliente.statusCliente}</c:if>"</td> 
+                        
                     </tr>
                     <tr>                        
                         <td colspan="2" align='center'><input type="submit" value="Salvar" /></td>

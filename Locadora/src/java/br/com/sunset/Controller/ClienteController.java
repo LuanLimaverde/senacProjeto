@@ -10,14 +10,8 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
-import br.com.sunset.dao.Classe;
 import br.com.sunset.dao.Cliente;
-import br.com.sunset.dao.Filme;
-import br.com.sunset.dao.Genero;
-import br.com.sunset.model.ClasseJpaModel;
 import br.com.sunset.model.ClienteJpaModel;
-import br.com.sunset.model.FilmeJpaModel;
-import br.com.sunset.model.GeneroJpaModel;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -41,10 +35,10 @@ public class ClienteController {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
             ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
             List<Cliente> cliente = clienteModel.findClienteEntities();
-            result.include("cliente", cliente);   
+            result.include("clientes", cliente);   
         }
         
-        @Post
+        /*@Post
 	@Path("/cliente/salvar")
 	public void salvar(Cliente cliente) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
@@ -55,35 +49,34 @@ public class ClienteController {
                         
 	}
         
-       /*
+       */
         
         @Post
-        @Path("/filme/salvar")
-	public void salvar(Filme movie) {
+        @Path("/cliente/salvar")
+	public void salvar(Cliente cli) {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");
-            FilmeJpaModel filmeModel = new FilmeJpaModel(emf);
-            if (movie.getIdFilme() == null){
-                filmeModel.create(movie);
+            ClienteJpaModel clienteModel = new ClienteJpaModel(emf);
+            if (cli.getIdCliente() == null){
+                clienteModel.create(cli);
                 try {
                     result.include("ap", "Gravado com Sucesso");
                     
                 } catch (Exception e) {
                     result.include("ap", e);
                 }
-                result.redirectTo(FilmeController.class).cadastro();
+                result.redirectTo(ClienteController.class).cadastro();
             } else{
                 try {
-                    filmeModel.edit(movie);
+                    clienteModel.edit(cli);
                     result.include("ap", "Alterado com Sucesso");
                 } catch (Exception e) {
                     result.include("ap", e);
                 }
-                    result.redirectTo(FilmeController.class).cadastro();
+                    result.redirectTo(ClienteController.class).cadastro();
             }
 		
 	}
         
-*/
         @Path("/cliente/listar")
         public void listar(){
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacPU");

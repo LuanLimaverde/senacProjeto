@@ -26,16 +26,17 @@
     </head>
     <body >
     
-        <nav class="navbar navbar-default" >
+ <nav class="navbar navbar-default" >
             <div class="container-fluid">
                 <div class="navbar-header">  
-                    <a class="navbar-brand" href="#" style="margin-right: 320px;">Sunset Filmes</a>
+                    <a class="navbar-brand" href="#" style="margin-right: 250px;">Sunset Filmes</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li><a href="<c:url value="/usuario/cadastro"/>">Gerenciar Usuários</a></li>
                         <li class="active"><a href="<c:url value="/filme/cadastro"/>">Gerenciar Filmes</a></li>
                         <li><a href="<c:url value="/cliente/cadastro"/>">Gerenciar Clientes</a></li>
-                        <li><a href="#" style="margin-right:380px; ">Locartória</a></li>
+                        <li><a href="#" style="margin-right:250px; ">Locartória</a></li>
                         <li><a href="<c:url value="/"/>">Retornar</a></li>
 
                 </div>
@@ -85,7 +86,8 @@
                     <tbody>
                         <tr>
                     <input type="hidden" name="movie.idFilme" value="<c:if test="${not empty filme.idFilme}">${filme.idFilme}</c:if>" />
-                        <td>Nome do Filme:</td>
+                        <td>Nome do Filme:</
+                            td>
                         <td><input type="text" name="movie.nomeFilme" value="<c:if test="${not empty filme.nomeFilme}">${filme.nomeFilme}</c:if>" /></td>
                         </tr>
 
