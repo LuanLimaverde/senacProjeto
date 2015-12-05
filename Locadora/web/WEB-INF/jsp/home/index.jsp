@@ -4,10 +4,10 @@
     <head>
         <link rel="stylesheet" href="<c:url value='/assets/css/style.css' />">    
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="shortcut icon" href="<c:url value='/assets/img/sun.png' />">
+        <link rel="shortcut icon" href="<c:url value='/assets/img/icon.png' />">
         <link href="<c:url value="/assets/css/bootstrap.css" />" rel="stylesheet" type="text/css"/>
-        <script src="<c:url value="/assets/js/bootstrap.js" />"" type="text/javascript"></script>
         <script src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
+        <script src="<c:url value="/assets/js/bootstrap.js" />" type="text/javascript"></script>
         <title>SunsetFilmes</title>
     </head>
     <body>
@@ -29,8 +29,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Inicial</a></li>
                     <li><a href="<c:url value="/home/destaque"/>">Destaque</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#" style="margin-right:350px;">Capas</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#c" style="margin-right:450px;">Contato</a></li>
                     <ul class="nav navbar-nav navbar-right" width="100%" style="float: right;">
 
                         <ul style="margin-top:7px;">
@@ -51,6 +50,48 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>   
-        
+        <div id="c" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center"> CONTATOS </h4>
+                    </div>
+                    <div class="modal-body" align="center">
+                        <p><img src="<c:url value="/assets/img/logo.png"/>" alt="...">	</p>
+                        <table>
+                            <tr>
+                                <td><img style="margin-right: 60px;" class="img-thumbnail" src="<c:url value="/assets/img/carlos.bmp"/>" alt="..."></td>
+
+                                <td><img class="img-thumbnail" src="<c:url value="/assets/img/luan.bmp"/>" alt="..."></td>
+                            </tr>
+                            <tr>
+                                <td><p style="margin-right: 60px;">Nome: Carlos Magno</p></td>
+                                <td><p>Nome: Luan Limaverde</p></td>
+                            </tr>
+                            <tr>
+                                <td><p style="margin-right: 60px;">Função: Gerente de Projeto</p></td>
+                                <td><p>Função: Desenvolvedor</p></td>
+                            </tr>
+                            <tr>
+                                <td><p style="margin-right: 60px;">Formação: Tecnólogo em A.D.S</p></td>
+                                <td><p>Formação: Tecnólogo em A.D.S</p></td>
+                            </tr>
+                            <tr>
+                                <td><p style="margin-right: 60px;">Email: cmagno@gmail.com</p></td>
+                                <td><p>Email: Luan.limaverde.a@gmail.com</p></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 </body>
 </html>

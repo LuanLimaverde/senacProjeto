@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="<c:url value='/assets/estilo/style.css' />">
-        <link rel="shortcut icon" href="<c:url value='/assets/img/sun.png' />">
+         <link rel="shortcut icon" href="<c:url value='/assets/img/icon.png' />">
         <link href="<c:url value="/assets/css/bootstrap.css" />" rel="stylesheet" type="text/css"/>
         <script src="<c:url value="/assets/js/bootstrap.js" />" type="text/javascript"></script>
         <script src="<c:url value="/assets/js/jquery-1.11.3.min.js" />"></script>
