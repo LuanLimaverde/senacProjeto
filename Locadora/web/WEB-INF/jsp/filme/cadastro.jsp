@@ -36,7 +36,7 @@
                         <li><a href="<c:url value="/usuario/cadastro"/>">Gerenciar Usuários</a></li>
                         <li class="active"><a href="<c:url value="/filme/cadastro"/>">Gerenciar Filmes</a></li>
                         <li><a href="<c:url value="/cliente/cadastro"/>">Gerenciar Clientes</a></li>
-                        <li><a href="#" style="margin-right:250px; ">Locartória</a></li>
+                        <li><a href="<c:url value="/locacao/gerenciamentoLocacao"/>" style="margin-right:250px; ">Locartória</a></li>
                         <li><a href="<c:url value="/"/>">Retornar</a></li>
 
                 </div>
